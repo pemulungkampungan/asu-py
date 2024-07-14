@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Process Apriori</title>
+  </head>
+  <body>
+    <h1>Proses Apriori</h1>
+    <form action="/process/{{ filename }}" method="post">
+      <label for="min_support">Min Support:</label>
+      <input type="text" id="min_support" name="min_support" value="0.14" required><br><br>
+      <label for="min_confidence">Min Confidence:</label>
+      <input type="text" id="min_confidence" name="min_confidence" value="0.8" required><br><br>
+      <label for="start_date">Start Date:</label>
+      <input type="date" id="start_date" name="start_date" value="2024-06-01" required><br><br>
+      <label for="end_date">End Date:</label>
+      <input type="date" id="end_date" name="end_date" value="2024-07-02" required><br><br>
+      <input type="submit" value="Proses">
+    </form>
+  </body>
+</html>

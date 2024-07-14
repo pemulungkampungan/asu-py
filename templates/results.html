@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hasil Rule</title>
+    <style>
+      .data {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .data th, .data td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hasil Rule</h1>
+    {% if tables %}
+      {% for table in tables %}
+        {{ table|safe }}
+      {% endfor %}
+    {% else %}
+      <p>No rules generated.</p>
+    {% endif %}
+
+    <h2>Hasil Analisa</h2>
+    <ul>
+      {% for result in analysis_results %}
+        <li>{{ result }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
